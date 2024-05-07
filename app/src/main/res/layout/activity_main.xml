@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/main_color">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal"
+        android:background="@drawable/toolbar_bg">
+        <ImageView
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:padding="5sp"
+            android:src="@drawable/todo_logo"
+            android:layout_gravity="center">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TODO"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:padding="5sp"
+            android:textColor="@color/white"/>
+        <ImageView
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="150sp"
+            android:padding="5sp"
+            android:src="@drawable/toolbar_three_dots"
+            android:layout_gravity="center">
+        </ImageView>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+    <ImageView
+        android:id="@+id/add_task_btn"
+        android:layout_width="80sp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="5sp"
+        android:layout_marginBottom="30sp"
+        android:layout_marginRight="20sp"
+        android:src="@drawable/add_data_btn"
+        android:layout_gravity="center">
+    </ImageView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
